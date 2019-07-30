@@ -6,23 +6,21 @@
 .wrapper {
     width: 1110px;
     margin: auto;
- }
+}
 
-.logo {
+.color {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     text-transform: uppercase;
     margin-top: 37px;
+    color: #555252;
+    font-weight: 300;
     float: left;
 }
-
-.color {
-    color: #555252;
-}
-
-.logo :first-letter {
+    
+.color:first-letter {
     color: #1abc9c;
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 .navigation ul, li, .link {
@@ -39,7 +37,7 @@ li:last-child {
     margin-right: 0px;
 }
 
-.navigation :hover{
+.navigation :hover {
     color: #1abc9c;
 }
 
@@ -52,11 +50,11 @@ li:last-child {
     float: right;
 }
  
-.clearfix::before { 
-    content: ""; /* Генерируем пустой элемент */
-    clear: both; /* Отменяем обтекание*/
-    display: table; /* Блочный элемент */
-  }
+.clearfix::after { 
+    content: ""; 
+    clear: both; 
+    display: table; 
+}
 
 h2 {
     margin: 105px 0 90px 0;
@@ -64,23 +62,25 @@ h2 {
     font-family: 'Roboto', sans-serif;
     color: #515151;  
     text-align: center;
+    text-transform: uppercase;
 }
 
- h2::after {
+h2::after {
     display: block;
     content: "";
     width: 165px;
     border-bottom: 7px solid #1abc9c; 
     padding-bottom: 30px;
     margin: 0 auto;    
-}
+}  
 
 .product {
     float: left;
     margin: 0 30px 44px 0;
-    
+    background: #323232; 
 }
-.product:nth-child(4n+4) {
+
+.product:nth-child(4n+5) {
     margin-right: 0px;
 } 
 
@@ -88,49 +88,51 @@ h2 {
     margin-bottom: 0px;
 }
 
-.product:hover h3 {
+.product:hover {
     background-color: rgb(78, 198, 171);
+}
+
+.name-price {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
 }
 
 a {
     text-decoration: none;
 }
 
-h3 {
-    font-family: 'Roboto', sans-serif;
+.title3 { 
+    float: left;
     padding-left: 13px;
     color: rgb(255, 255, 255);
-    background-color: #323232;
-    text-transform: uppercase;
-    font-size: 18px;
     line-height: 40px;
-    list-style: none;
 }
 
-span {
+.price {
     float: right;
     color: #ffffff;
     background:rgba(255, 255, 255, 0.4);
-    padding-right: 10px;
-    padding-left: 10px; 
+    padding: 10px
 }
 
 .image { 
-    float: left; 
+    float: left;
     background-color:rgb(233, 240, 253);
 }
 
-.footer {
+.news {
     width:350px;
     float: left;
     margin: 0 30px 0 0;
 }
 
-.footer:last-child {
+.news:last-child {
     margin-right: 0px;
 }
 
-h4 {
+.title2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -143,7 +145,7 @@ h4 {
     font-weight: 400;
 }
 
-h4::after {
+.title2::after {
     display: block;
     content: "";
     width: 136px;
