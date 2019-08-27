@@ -91,12 +91,12 @@ main {
 
 .slider_left {
   left: 0;
-  background-image: url(/image/slider.left.png);
+  background-image: url("../image/slider.left.png");
 }
 
 .slider_right {
   right: 0;
-  background-image: url(/image/slider.right.png);
+  background-image: url("../image/slider.right.png");
 } 
 
 .slider:hover {
@@ -234,21 +234,21 @@ section {
 }
 
 .icon1 {
-  background-image: url("/image/icon1.png");
+  background-image: url("../image/icon1.png");
   margin-right: 7px;
 }
 
 .icon2 {
-  background-image: url("/image/icon2.png");
+  background-image: url("../image/icon2.png");
   margin-right: 7px;
 }
 
 .icon3 {
-  background-image: url("/image/icon3.png");
+  background-image: url("../image/icon3.png");
 }
 
 .icon4 {
-  background-image: url("/image/icon4.png");
+  background-image: url("../image/icon4.png");
   width: 48px;
   height: 48px;
   border: none;
