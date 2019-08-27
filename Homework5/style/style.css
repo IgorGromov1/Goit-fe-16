@@ -4,13 +4,13 @@
   margin: 0;
 }
 
-.wrapper {
-  width: 1600px;
-  margin:auto;
-}
- 
-header {
+.container {
   width: 1110px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
   margin: 0 auto 32px auto;
 }
 
@@ -62,7 +62,7 @@ li {
 }
 
 li:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 nav :hover {
@@ -74,41 +74,43 @@ main {
 }
 
 .main_image {
+  width: 100%;
   object-fit: fill;
 }
 
 .slider_left, .slider_right {
-position: absolute;
-width: 104px;
-height: 104px;
-color: rgb(255, 255, 255);
-background-color: rgba(78, 198, 171, 0.651);
-border: none;
-top: 50%;
-transform: translateY(-50%);
-z-index: 2;
+  position: absolute;
+  width: 104px;
+  height: 104px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(78, 198, 171, 0.651);
+  border: none;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 .slider_left {
-  left: 15%;
+  left: 0;
+  background-image: url(/image/slider.left.png);
 }
 
 .slider_right {
-  right: 15%;
-}
+  right: 0;
+  background-image: url(/image/slider.right.png);
+} 
 
 .slider:hover {
   background-color: rgb(78, 198, 171);
   opacity: 1;
 }
 
-.main-slider::after {
+main::before {
   content: "";
   background-color: rgb(0, 0, 2);
   opacity: 0.522;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 600px;
 }
 
 .main_h {
@@ -118,6 +120,7 @@ z-index: 2;
   text-transform: uppercase;
   color: #ffffff;
   line-height: 1.367;
+  white-space: nowrap;
 }
 
 .main_h3 {
@@ -128,34 +131,39 @@ z-index: 2;
   color: #ffffff;
 }
 
-.h2_h3 {
+.main_heading {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  display: block;
+}
+
 section {
-  padding: 100px ;
-  width: 1600px;
+  position: relative;
+  padding: 100px 0 100px 0;
   background-color: rgb(233, 240, 253);
 }
 
-.new {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  color: rgb(81, 81, 81);
-  font-size: 48px;
-  text-transform: uppercase;
+.product {
+  position: relative;
+  float: left;
+  width: 255px;
+  margin-right: 30px;
 }
 
-.new:after {
-  display: block;
-  content: "";
-  width: 165px;
-  border-bottom: 7px solid #1abc9c; 
-  padding-bottom: 30px;
-  margin: 0 auto;    
+.product:last-child {
+  margin-right: 0px;
 }
 
 .new1 {
@@ -163,131 +171,139 @@ section {
   margin-bottom: 80px;
 }
 
-.group {
-  width: 1110px;
-  margin: auto;
+.new1:after {
+  display: block;
+  content: "";
+  border-bottom: 7px solid rgb(26, 188, 156);
+  width: 165px;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
 
-.product {
+.new {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: rgb(81, 81, 81);
+}
+
+.img_overlay {
   position: relative;
-  float: left;
-  margin-right: 30px;
-  background-color: rgb(50, 50, 50);
   width: 255px;
+  height: 282px;
 }
 
-.groupbutton {
-   opacity: 0;
+.img_overlay::before {
+  content: "";
+  display: block;
+  position: absolute; 
+  top: 5%;
+  left: 5%;
+  height: 90%;
+  width: 90%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
 }
 
-.product:hover .groupbutton {
-   opacity: 1;
-}
- 
-.icon {
-  border-width: 1px;
-  border-color: rgb(255, 255, 255);
-  border-style: solid; 
-  background: transparent;
+.product:hover .img_overlay::before {
+  opacity: 1;
 }
 
-.icon4 {
-  float: left;
-  border: none;
-}
-
-.background:last-child {
-  margin-right: 0px;
-}
-
-.background {
-  margin-right: 7px;
-  background: none;
-  border: none;
-}
-
-.bigbutton {
+.iconposition {
   position: absolute;
-  left: 15%;
-  top: 45%;
-  margin-top: 7px;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
-.button1 {
-  line-height: 48px;
-  border-width: 1px;
-  border-color: rgb(255, 255, 255);
-  color: #ffffff;
-  border-style: solid; 
-  background: none;
-  width: 166px;
+.product:hover .iconposition {
+  opacity: 1;
+}
+
+.icon1, .icon2, .icon3 {
+  width: 48px;
   height: 48px;
-  text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  background-color: rgb(50, 50, 50);
-}
-
-.basket {
-  position: absolute;
-}
-
-.icon_first_line {
-  position: absolute;
-  left: 15%;
-  top: 30%;
+  border: 1px solid white;
+  background: transparent;
 }
 
 .icon:hover {
   border-color: #1abc9c;
-  background: #1abc9c;
+  background-color: #1abc9c;
 }
 
-.product:hover .overlay {
-  position: absolute;
-  border-width: 10px;
-  border-style: solid;
-  border-color: rgb(255, 255, 255); 
-  background-color: rgb(0, 0, 0);
+.icon1 {
+  background-image: url("/image/icon1.png");
+  margin-right: 7px;
+}
+
+.icon2 {
+  background-image: url("/image/icon2.png");
+  margin-right: 7px;
+}
+
+.icon3 {
+  background-image: url("/image/icon3.png");
+}
+
+.icon4 {
+  background-image: url("/image/icon4.png");
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+}
+
+.bigicon{
+  margin-top: 7px;
+  background: transparent;
+  border: 1px solid white;
+  width: 166px;
+  height: 50px;
+  background: rgb(50, 50, 50);
+}
+
+.addsome {
+  float: right;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding-right: 15px;
+  line-height: 50px;
+}
+
+.productinfo {
   width: 255px;
-  height: 282px;
-  opacity: 0.549;
+  height: 40px;
+  background-color: rgb(50, 50, 50);
 }
 
-.product:last-child {
-  margin-right: 0px;
+.product:hover .productinfo{
+  background-color: rgb(78, 198, 171);
 }
 
-.name {
-  float: left;
+.productname {
   padding-left: 13px;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
   line-height: 40px;
 }
 
-img {
-  display: block;
-}
-
-.linkinside {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 900;
-  color: #ffffff;
-}
-
 .price {
-  float: right;
   font-family: 'Roboto', sans-serif;
+  float: right;
   font-size: 18px;
+  color: rgb(255, 255, 255);
   font-weight: 900;
-  color: #ffffff;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 10px;
-}
-
-.product:hover .nameproduct{
-  background-color: rgb(78, 198, 171);
 }
 
 footer {
@@ -297,7 +313,6 @@ footer {
   font-weight: 400;
   font-size: 16px;
   height: 88px;
-  width: 1600px;
   background-color: #323232;
   color: rgb(254, 254, 254); 
 }
@@ -308,6 +323,4 @@ footer {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
-}
- 
- 
+} 
