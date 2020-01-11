@@ -1,99 +1,89 @@
-@media (min-width: 320px) and (max-width: 767px){
-    .partner:not(:last-child) {
-        margin-bottom: 30px;
-    }
+@media (min-width: 320px) and (max-width: 767px) {
+  .partner:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: 768px) {
-.img-bn {
-    width: 768px;
+  .img-bn {
+    width: 100%;
     height: 700px;
-}
+  }
 
-.logo-btn {
+  .logo-btn {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
     padding: 20px 40px 100px 40px;
-}
+  }
 
-.btn-block {
+  .btn-block {
     padding-bottom: 0;
-}
+  }
 
-.title {
+  .title {
     font-size: 52px;
     padding-bottom: 20px;
-}
+  }
 
-.title-text {
+  .title-text {
     font-size: 24px;
     padding-bottom: 20px;
-}
+  }
 
-.link-find {
+  .link-find {
     width: 225px;
-}
+  }
 
-.container {
+  .container {
     width: 490px;
-}
+  }
 
-.partner {
+  .partner {
     width: 230px;
+  }
 
-}
-
-.btn-other {
+  .btn-other {
     width: 225px;
-}
+  }
 
-.link-see {
+  .link-see {
     width: 225px;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .all-partners {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .partner:nth-last-of-type(-n + 2) {
+    margin-bottom: 0;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
-    .all-partners {
-        display: flex;
-        flex-wrap: wrap;
-    }
+@media (min-width: 1200px) {
+  .all-partners {
+    display: flex;
+  }
 
-    .partner:nth-last-of-type(-n+2) {
-        margin-bottom: 0;
-    }
+  /* .wrapper {
+    width: 100%;
+  } */
 
-}
+  .logo-btn {
+    width: 940px;
+    margin: 0 auto;
+    padding: 25px 0 100px 0;
+  }
 
+  span {
+    display: block;
+  }
 
-@media (min-width: 1440px) {
-    .img-bn {
-        width: 100%;
-        object-fit: cover;
-        height: auto;
-    }
-
-    .all-partners {
-        display: flex;
-    }
-
-    .wrapper {
-        min-width: 1440px;
-    }
-
-    .logo-btn {
-        width: 940px;
-        margin: 0 auto;
-        padding: 25px 0 100px 0;
-    }
-
-    span {
-        display: block;
-    }
-    
-    .container {
-        width: 940px;
-    }
+  .container {
+    width: 940px;
+  }
 }
